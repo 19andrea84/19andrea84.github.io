@@ -1,0 +1,85 @@
+<!--
+var ConteggioSecondi = -50;
+var DeConteggioSecondi = 290;
+var MenuBurgher
+function MostraNascondiBurgherMenu(){
+	if (MenuBurgher=="Visibile") {
+		if (ConteggioSecondi<=290) {
+			document.getElementById('BarraMenu').style.background='#000000';
+			var AltezzaTestata = "-"+ConteggioSecondi+"px";
+			document.getElementById('MenuProdotti').style.top=AltezzaTestata.replace("--", "");
+			ConteggioSecondi+=12;
+			DeConteggioSecondi = 290;
+			if (ConteggioSecondi>=290) {
+				MenuBurgher = "Non visibile"
+				document.getElementById('BarraMenu').style.background='url(../images/BarraMenuBackground.png)';
+				document.getElementById('MenuProdotti').style.display='none';
+				DeConteggioSecondi = 290;
+				return false;
+			}
+		}
+		setTimeout('MostraNascondiBurgherMenu()',20);
+	}
+	if (MenuBurgher!="Visibile") {
+		document.getElementById('BarraMenu').style.background='#000000';
+		document.getElementById('MenuProdotti').style.display='block';
+		if (DeConteggioSecondi>=-55) {
+			var AltezzaTestataNascondi = "-"+DeConteggioSecondi+"px";
+			document.getElementById('MenuProdotti').style.top=AltezzaTestataNascondi.replace("--", "");
+			DeConteggioSecondi=DeConteggioSecondi-12;
+			if (DeConteggioSecondi<=-55) {
+				ConteggioSecondi = -50;
+				MenuBurgher = "Visibile"
+				document.getElementById('BarraMenu').style.background='url(../images/BarraMenuBackground.png)';
+				return false;
+			}
+		}
+		setTimeout('MostraNascondiBurgherMenu()',20);
+	}
+	if (ConteggioSecondi==0) {
+		MenuBurgher = "Non visibile"
+	}
+}
+
+var ConteggioSecondiGestionale = -50;
+var DeConteggioSecondiGestionale = 290;
+var MenuBurgherGestionale
+function MostraNascondiBurgherMenuGestionale(){
+	if (MenuBurgherGestionale=="Visibile") {
+		if (ConteggioSecondiGestionale<=290) {
+			document.getElementById('BarraMenu').style.background='#000000';
+			var AltezzaTestataGestionale = "-"+ConteggioSecondiGestionale+"px";
+			document.getElementById('Menu').style.top=AltezzaTestataGestionale.replace("--", "");
+			ConteggioSecondiGestionale+=9;
+			DeConteggioSecondiGestionale = 290;
+			if (ConteggioSecondiGestionale>=290) {
+				MenuBurgherGestionale = "Non visibile"
+				document.getElementById('BarraMenu').style.background='url(../images/BarraMenuBackground.png)';
+				document.getElementById('Menu').style.display='none';
+				DeConteggioSecondiGestionale = 290;
+				return false;
+			}
+		}
+		setTimeout('MostraNascondiBurgherMenuGestionale()',20);
+	}
+	if (MenuBurgherGestionale!="Visibile") {
+		document.getElementById('BarraMenu').style.background='#000000';
+		document.getElementById('Menu').style.display='block';
+		if (DeConteggioSecondiGestionale>=-61) {
+			var AltezzaTestataNascondiGestionale = "-"+DeConteggioSecondiGestionale+"px";
+			document.getElementById('Menu').style.top=AltezzaTestataNascondiGestionale.replace("--", "");
+			DeConteggioSecondiGestionale=DeConteggioSecondiGestionale-9;
+			if (DeConteggioSecondiGestionale<=-61) {
+				ConteggioSecondiGestionale = -50;
+				MenuBurgherGestionale = "Visibile"
+				document.getElementById('BarraMenu').style.background='url(../images/BarraMenuBackground.png)';
+				return false;
+			}
+		}
+		setTimeout('MostraNascondiBurgherMenuGestionale()',20);
+	}
+	if (ConteggioSecondiGestionale==0) {
+		MenuBurgherGestionale = "Non visibile"
+	}
+}
+//-->

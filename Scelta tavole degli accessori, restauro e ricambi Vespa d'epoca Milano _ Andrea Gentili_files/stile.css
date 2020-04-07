@@ -1,0 +1,994 @@
+/* =Font face
+-------------------------------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Open Sans:500,700,800);
+@import url(http://fonts.googleapis.com/css?family=Raleway:900,700,900);
+@import url(http://fonts.googleapis.com/css?family=Courgette:400);	
+
+/* BASIC RESET */
+*{
+	margin: 0 auto; 
+	padding: 0;
+	color: #000000;
+	text-align: justify;
+   	font-family: 'Open Sans', sans-serif, Arial;
+	}
+
+div.clear {
+	clear: both; 
+}
+
+/* HEADER */
+#AvvisoCookie {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	padding: 1%;
+	width: 98%;
+	height: auto;
+	background: #FFFFFF;
+	z-index: 20;
+	font-size: 12px;
+}
+
+#Testata { 
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 667px;
+	text-align: center;
+	clear: both;
+	z-index: 1;
+	background-image: url(../images/Vendita_ricambi_Vespa_Milano.jpg);
+	background-position: bottom right;
+	background-size: 100% !important;
+	}
+
+/* Ridimensiono l'immagine di sfondo per schermi piccoli */
+@media only screen and (max-width: 1100px) {
+        #Testata {background-size: 130% !important;}
+}
+@media only screen and (max-width: 675px) {
+        #Testata {background-size: 160% !important; background-position: top right; height: 540px;}
+}
+@media only screen and (max-width: 620px) {
+        #Testata {background-size: 160% !important; background-position: top right; height: 560px;}
+}
+
+/* MENU */
+#BarraMenu {
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: auto;
+	min-height: 60px;
+	background-image: url(../images/BarraMenuBackground.png);
+}
+
+#Menu { 
+	position: relative;
+	width: auto;
+	max-width: 960px;
+	height: auto;
+	}
+
+#Menu ul { 
+	list-style: none; 
+	}
+	
+#Menu li a { 
+	position: relative;
+	float: left;
+	display: block;
+	width: 16.3%;
+	height: auto;
+	text-align: center;
+	line-height: 50px;
+	margin-top: 5px;
+	border-right: 1px solid #302824;
+	border-left: 1px solid #544844;
+	}
+
+#Menu ul li { 
+	display:inline; 
+	font-size: 15px;
+	}
+	
+#Menu ul li a { 
+	color: #999999; 
+	text-decoration: none; 
+	}
+	
+#Menu ul li a:hover { 
+	text-decoration: none; 
+	color: #6DB4EF;
+	}
+
+/* Ridimensiono il Menù per schermi piccoli
+@media only screen and (max-width: 505px) {
+        #Menu li a {width: 30% !important; height: 45px !important; line-height: 45px;}
+} */
+
+#BarraMenuProdotti {
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: auto;
+	min-height: 48px;
+	/* background: #6DB4EF;
+	background-image: url('../images/SfondoAzzurroTrasparente.png') */
+	border-top: 1px solid #A6C3E9;
+	border-bottom: 1px solid #A6C3E9;
+}
+
+#MenuProdotti { 
+	position: relative;
+	width: 100%;
+	height: auto;
+	}
+
+#MenuProdotti ul { 
+	list-style: none; 
+	}
+	
+#MenuProdotti li a { 
+	position: relative;
+	float: right;
+	display: block;
+	width: auto;
+	min-width: 12%;
+	height: auto;
+	text-align: center;
+	line-height: 50px;
+	border-right: 1px solid #3CA3F2;
+	border-left: 1px solid #A6C3E9;
+	font-family: 'Raleway', Arial, Sans-serif;
+	font-size: 16px;
+	}
+
+#MenuProdotti ul li { 
+	display:inline; 
+	font-size: 15px;
+	font-weight: bold;
+	}
+	
+#MenuProdotti ul li a { 
+	color: #FFFFFF; 
+	text-decoration: none; 
+	}
+	
+#MenuProdotti ul li a:hover { 
+	text-decoration: none; 
+	color: #FFFFFF;
+	background: #3CA3F2;
+	}
+
+/* Ridimensiono il MenuProdotti e faccio comparire il Burgher Menù per schermi piccoli */
+@media only screen and (max-width: 675px) {
+        #MenuProdotti {display: none; position: absolute !important; z-index: 1001; background: #6DB4EF;}
+        #BurgherMenu {display: block !important;}
+		#MenuProdotti li a {width: 100% !important; border-bottom: 1px solid #3CA3F2; border-top: 1px solid #A6C3E9;}
+        #BurgherMenuGestionale {display: block !important;}
+        #Menu {width: 100% !important; display: none; position: absolute !important; z-index: 1005 !important; background: #000000;}
+		#Menu li a {width: 100% !important; border-right: 0 !important; border-left: 0 !important; border-bottom: 1px solid #302824; border-top: 1px solid #544844; margin-top: 0 !important;}
+}
+
+#RiquadroCerca {
+	position: relative;
+	width: 90%;
+	max-width: 460px;
+	height: 100px;
+/*	top: 181px; senza anno */
+	top: 140px;
+	margin-left: 7.4%;
+	}
+
+#RiquadroCercaEspandibile {
+	position: relative;
+	width: 90%;
+	max-width: 460px;
+	height: 100px;
+	top: 30px;
+	margin-left: 7.4%;
+	cursor: pointer;
+	}
+
+#RiquadroCercaTitolo {
+	width: 100%;
+	height: auto;
+	background: #FFFFFF;
+	font-size: 20px;
+	line-height: 30px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 20px;
+	color: #333333;	
+	}
+
+.CancellaResponsive {
+	color: #FFFFFF;
+	}
+
+/* Ridimensiono il RiquadroCerca per schermi piccoli */
+@media only screen and (max-width: 675px) {
+        #RiquadroCerca {top: 30px !important;}
+}
+@media only screen and (max-width: 580px) {
+/*        #RiquadroCerca {max-width: 80% !important; top: 80px !important;} senza anno */
+        #RiquadroCercaEspandibile {max-width: 80% !important;}
+        #RiquadroCercaTitolo {padding-left: 10px !important; padding-right: 10px !important;}
+        .CancellaResponsive {display: none !important;}
+}
+
+#RiquadroCercaTipo {
+	display: none;
+	width: 100%;
+	height: 67px;
+	background: #333333;
+	font-size: 18px;
+	line-height: 30px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 20px;
+	color: #FFFFFF;
+	}
+
+#RiquadroCercaCorpo {
+	width: 100%;
+	height: auto;
+	min-height: 208px;
+	background-image: url(../images/BarraMenuBackground.png);
+	font-size: 18px;
+	line-height: 30px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 20px;
+	color: #FFFFFF;
+	}
+
+#RiquadroCercaSceltaTavole {
+	width: 100%;
+	height: auto;
+	font-size: 20px;
+	color: #FFFFFF;
+	line-height: 30px;
+	padding-bottom: 10px;
+}
+
+#RiquadroCercaCorpoSinistra {
+	width: 50%;
+	height: auto;
+	font-size: 18px;
+	float: left;
+	line-height: 22px;
+	color: #FFFFFF;
+	padding-bottom: 10px;
+	}
+
+#RiquadroCercaCorpoDestra {
+	width: 50%;
+	height: auto;
+	font-size: 18px;
+	float: right;
+	line-height: 22px;
+	color: #FFFFFF;
+	padding-bottom: 10px;
+	}
+
+.MadeInItaly {
+	width: 190px;
+    top: 20%;
+    right: 5%;
+    float: right;
+    position: absolute;
+}
+
+/* Ridimensiono il MadeInItaly per schermi piccoli */
+@media only screen and (max-width: 675px) {
+        .MadeInItaly {display: none !important;}
+}
+
+/* CORPO */
+#ContenitoreCorpo {
+	position: relative;
+	width: 100%;
+	height: auto;
+	}
+
+#Corpo {
+	position: relative;
+	width: 90%;
+	height: auto;
+	margin-top: 50px;
+	text-align: center;
+    color: #116FDE;
+    font-size: 26px;
+	font-weight: bold;
+	padding-left: 5%;
+	padding-right: 5%;
+	}
+
+/* Ridimensiono il font del Corpo per gli schermi piccoli */
+@media only screen and (max-width: 400px) {
+        #Corpo {font-size: 20px !important;}
+}
+
+#Promozioni {
+	position: relative;
+	width: 287px;
+	height: 195px;
+	background-position: center center;
+	text-align: center;
+	overflow: hidden;
+	float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+	}
+
+.PromozioniNome {
+	width: 94%;
+	padding: 10px;
+    font-size: 16px;
+	line-height: 18px;
+	margin-top: 128px;
+    background-image: url(../images/BarraMenuBackground_ricerca.png);
+    color: #FFFFFF;
+    text-decoration: none;
+	}
+
+.StampaNOSHome {
+	width: 100px;
+	position: absolute;
+	z-index: 0;
+	top: 1px;
+	right: 1px;
+	}
+
+.StampaRaritaHome {
+	width: 100px;
+	position: absolute;
+	z-index: 0;
+	top: 1px;
+	right: 1px;
+	}
+
+#PromozioniNomeArticolo {
+	width: auto;
+	position: absolute;
+	z-index: 0;
+	top: 0px;
+	left: 0px;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: lighter;
+    background-image: url(../images/BarraMenuBackground_ricerca.png);
+	padding: 5px;
+	}
+		
+#UltimiArrivi {
+	position: relative;
+	width: 143px;
+	height: 98px;
+	background-position: center center;
+	text-align: center;
+	overflow: hidden;
+	float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+	}
+
+.UltimiArriviNome {
+	width: 94%;
+	padding-top: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+    font-size: 11px;
+	line-height: 12px;
+	margin-top: 60px;
+    background-image: url(../images/BarraMenuBackground_ricerca.png);
+    color: #FFFFFF;
+    text-decoration: none;
+	}
+
+.ElencoArticoli1 {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 730px;
+	height: auto;
+	min-height: 150px;
+	background: #6DB4EF;
+	color: #116FDE;
+	text-align: left;
+	padding-right: 20px;
+	overflow: hidden;
+	float: left;
+	margin-right: 5px;
+    margin-bottom: 15px;
+	font-size: 18px;
+	text-decoration: none;
+	}
+
+.ElencoArticoli1:hover {
+	background: #116FDE;
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
+.ElencoArticoli2 {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 730px;
+	height: auto;
+	min-height: 150px;
+	background: #AAAAAA;
+	color: #646464;
+	text-align: left;
+	padding-right: 20px;
+	overflow: hidden;
+	float: left;
+	margin-right: 5px;
+    margin-bottom: 15px;
+	font-size: 18px;
+	text-decoration: none;
+	}
+
+.ElencoArticoli2:hover {
+	background: #646464;
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
+.ElencoArticoli3 {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 730px;
+	height: auto;
+	min-height: 150px;
+	background: #FF89CD;
+	color: #FF0696;
+	text-align: left;
+	padding-right: 20px;
+	overflow: hidden;
+	float: left;
+	margin-right: 5px;
+    margin-bottom: 15px;
+	font-size: 18px;
+	text-decoration: none;
+	}
+
+.ElencoArticoli3:hover {
+	background: #FF0696;
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
+.ElencoArticoli4 {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 730px;
+	height: auto;
+	min-height: 150px;
+	background: #FFCC01;
+	color: #715A00;
+	text-align: left;
+	padding-right: 20px;
+	overflow: hidden;
+	float: left;
+	margin-right: 5px;
+    margin-bottom: 15px;
+	font-size: 18px;
+	text-decoration: none;
+	}
+
+.ElencoArticoli4:hover {
+	background: #715A00;
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
+.ElencoArticoli5 {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 730px;
+	height: auto;
+	min-height: 150px;
+	background: #67FF9A;
+	color: #009F34;
+	text-align: left;
+	padding-right: 20px;
+	overflow: hidden;
+	float: left;
+	margin-right: 5px;
+    margin-bottom: 15px;
+	font-size: 18px;
+	text-decoration: none;
+	}
+
+.ElencoArticoli5:hover {
+	background: #009F34;
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
+.ImmagineArticoli {
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin-right: 20px;
+}
+
+.StampaNOS {
+	width: 100px;
+	position: absolute;
+	z-index: 10;
+	bottom: 1px;
+	right: 1px;
+}
+
+.StampaPromozione {
+	width: 100px;
+	position: absolute;
+	z-index: 10;
+	bottom: 1px;
+	right: 100px;
+}
+/* Riposizione le immagini degli articoli per gli schermi piccoli */
+@media only screen and (max-width: 525px) {
+        .ImmagineArticoli {margin-top: 23px !important; margin-bottom: 23px !important;}
+}
+@media only screen and (max-width: 442px) {
+/*       .ImmagineArticoli {margin-top: 23px !important; margin-bottom: 125px !important;}
+        .StampaNOS {left: -200px !important;} */
+}
+@media only screen and (max-width: 375px) {
+/*        .ImmagineArticoli {margin-top: 23px !important; margin-bottom: 157px !important;} */
+}
+
+.ElencoArticoliGrande {
+	color: #FFFFFF;
+	font-size: 30px;
+	text-decoration: none;
+	}
+
+.RiquadroImmaginiArticoloDettagli {
+	width: 100%;
+	max-width: 927px;
+	height: auto;
+}
+/* Riposiziono le immagini degli articoli per gli schermi piccoli */
+@media only screen and (max-width: 1045px) {
+        .RiquadroImmaginiArticoloDettagli {max-width: 695px !important;}
+}
+@media only screen and (max-width: 788px) {
+        .RiquadroImmaginiArticoloDettagli {max-width: 462px !important;}
+}
+
+.ImmaginiPiccoleArticolo {
+	width: 219px;
+	height: 219px;
+	float: left;
+	border: 1px solid #116FDE;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.StampaNOSArticolo {
+	display: block;
+	width: 100px;
+	position: absolute;
+	z-index: 10;
+}
+
+.StampaPromozioneArticolo {
+	display: block;
+	width: 100px;
+	position: absolute;
+	z-index: 10;
+	left: 25%;
+}
+
+.StampaMadeInItalyArticolo {
+	width: 100px;
+	position: absolute;
+	z-index: 10;
+    top: -30px;
+	margin-left: 20px;
+}
+
+.CercaIframeTavole {
+	width: 100%;
+    height: 100%;
+}
+
+.NumeroImmagine{
+	display: block;
+    width: auto;
+    height: auto;
+    line-height: 20px;
+    position: absolute;
+    z-index: 10;
+    background-image: url(../images/BarraMenuBackground_ricerca.png);
+    text-align: center;
+	color: #FFFFFF;
+	padding: 3px;
+}
+
+#TavoleLoader{
+	display: block;
+    width: 94%;
+    height: 1220px;
+	top: 20px;
+	float: left;
+    background: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+	font-size: 30px;
+}
+
+.MappaTavola {
+	border: 1px solid #116FDE;
+}
+
+.MappaTavolaArea {
+	position: absolute;
+	background: #116FDE;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	border: 1px solid #d5d5d5;
+	border-radius: 10px;
+	opacity: 0.6;
+}
+
+.MappaTavolaAreaNascosta {
+	display: none;
+}
+
+.CercaTavoleImmagini {
+	width: 41%;
+	cursor: pointer;
+	float: left;
+	max-width: 100%;
+	border: 2px solid #116FDE;
+	max-height: 258px;
+	margin-left: 55px;
+	margin-top: 20px;
+}
+
+#SeparatoreTitoloTavole {
+	width: 100%;
+	height: 8px;
+	color: #FFFFFF;
+	display: none;
+}
+
+/* Ridimensiono le immagini degli articoli per gli schermi piccoli */
+@media only screen and (max-width: 999px) {
+		.CercaTavoleImmagini {width: 84%;}
+}
+@media only screen and (max-width: 788px) {
+        .StampaNOSArticolo {display: block !important; float: none !important; margin-left: auto; margin-right: auto; margin-bottom: 10px;}
+        .StampaPromozioneArticolo {left: 32% !important;}
+		.StampaMadeInItalyArticolo {width: 60px !important; float: none !important; display: block; margin-left: 0;}
+}
+@media only screen and (max-width: 450px) {
+		.CercaTavoleImmagini {width: 70%;}
+}
+@media only screen and (max-width: 400px) {
+        #SeparatoreTitoloTavole {display: block;}
+}
+
+.OrdiniSelectCliente {
+	z-index: 1000;
+	display: none;
+	width: 96.4%;
+	height: 200px;
+	background: #FFFFFF;
+	border: 1px solid #116FDE;
+	float: left;
+	margin-top: -16px;
+	overflow-y: scroll;
+}
+
+.OrdiniIframeCliente {
+    width: 100%;
+    height: 200px;
+	float: left;
+	text-align: left;
+}
+
+
+#Login_fallito {
+	width: 98%;
+	height: auto;
+	border: 1px solid #ebccd1;
+	background: #f2dede;
+	color: #a94442;
+	font-size: 14px;
+	margin-bottom: 15px;
+	float: left;
+	padding-top: 15px;
+	padding-left: 1.5%;
+	padding-bottom: 15px;
+	padding-right: 1.5%;
+}
+
+.Longin_fallito_chiudi {
+	float: right;
+	text-decoration: none;
+	color: #a94442;
+	font-size: 14px;
+}
+
+.Longin_fallito_chiudi:hover {
+	text-decoration: none;
+	color: #2b66ac;
+}
+
+/* FOOTER */
+#Footer {
+	position: relative;
+	width: 98%;
+	text-align: center;
+	height: auto;
+	overflow: hidden;
+	text-align: left;
+	margin-top: 40px;
+	background: #282828;
+	padding: 1%;
+    color: #E4E4E4;
+	}
+
+#RiquadroFooterPiccolo {
+	position:relative;
+	width: 28%;
+	height: auto;
+	min-height: 60px;
+	margin-top: 10px;
+	margin-right: 10px;
+	float: left;
+	text-align: left;
+	padding: 2%;
+    color: #E4E4E4;
+	}
+
+/* Ridimensiono i riquadri del footer per schermi piccoli */
+@media only screen and (max-width: 765px) {
+        #RiquadroFooterPiccolo {width: 26% !important;}
+}
+@media only screen and (max-width: 570px) {
+        #RiquadroFooterPiccolo {width: 97% !important; margin-right: 0 !important;}
+}
+
+.AmministrazioneIframeTavole {
+	width: 1100px;
+    height: 900px;
+}
+
+a.link:link {
+	color: #6DB4EF;
+	text-decoration: none;
+}
+a.link:visited {
+	color: #6DB4EF;
+	text-decoration: none;
+}
+a.link:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+a.footer:link {
+	color: #999999;
+	text-decoration: none;
+}
+a.footer:visited {
+	color: #999999;
+	text-decoration: none;
+}
+a.footer:hover {
+	color: #E4E4E4;
+	text-decoration: underline;
+}
+.BottonePubblico {
+	width: 198px;
+	height: 36px;
+	color: #FFFFFF;
+	background: #6DB4EF;
+	font-family: 'Raleway', Arial, Sans-serif;
+	text-decoration: none;
+	text-align: center;
+	font-size: 16px;
+	line-height: 16px;
+	border: 0;
+}
+
+.BottonePubblico:hover {
+	width: 198px;
+	height: 36px;
+	color: #FFFFFF;
+	font-family: 'Raleway', Arial, Sans-serif;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 14px;
+	border: 0;
+}
+
+.BottoneFunzioneCambiaScelta {
+	display: none;
+	width: auto;
+    height: 16px;
+    color: #FFFFFF;
+    background: #6DB4EF;
+    font-family: 'Raleway', Arial, Sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    border: 0;
+    cursor: pointer;
+    float: left;
+    padding: 10px;
+}
+
+.BottoneFunzioneCambiaScelta:hover {
+	color: #FFFFFF;
+	font-family: 'Raleway', Arial, Sans-serif;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.CasellaDiTesto {
+	width: auto;
+	height: 30px;
+	padding: 5px;
+	line-height: 7px;
+	background: #FFFFFF;
+	color: #116FDE;
+	font-family: 'Raleway', Arial, Sans-serif;
+	border: 1px solid #116FDE;
+	float: right;
+	margin-right: 20px;
+	font-size: 14px;
+}
+
+.CasellaDiTestoCerca {
+	width: auto;
+	height: 30px;
+	padding: 5px;
+	line-height: 7px;
+	background: #FFFFFF;
+	color: #116FDE;
+	font-family: 'Raleway', Arial, Sans-serif;
+	border: 1px solid #116FDE;
+	float: right;
+	margin-right: 20px;
+}
+
+/* Ridimensiono CasellaDiTestoCerca per schermi piccoli */
+@media only screen and (max-width: 580px) {
+        .CasellaDiTestoCerca {width: 50% !important;}
+        #BottoneRicambi {display: block !important;}
+        #BottoneAccessori {display: block !important;}
+        #BottoneCarta {display: block !important;}
+		#BottonePubblicoTavole {font-size: 44px !important;}
+}
+
+.TestoNormaleAmministrazione {
+	color: #000000;
+}
+
+.TestoErroreAmministrazione {
+	font-size: 20px
+}
+
+#SelectMotelli {
+	z-index: 1000;
+	position: absolute;
+	display: none;
+	width: 27%;
+	height: 200px;
+	background: #FFFFFF;
+	border: 1px solid #116FDE;
+	float: left;
+	margin-top: 28px;
+	overflow-y: scroll;
+	}
+
+/* Ridimensiono il div della selezione modelli per schermi piccoli */
+@media only screen and (max-width: 580px) {
+        #SelectMotelli {width: 50% !important;}
+}
+
+#AcapoSottoMenu {
+	display: none;
+	clear: both;
+}
+
+#AcapoSottoMenuRicambi {
+	display: none;
+	clear: both;
+}
+#AcapoSottoMenuAccessori {
+	display: none;
+	clear: both;
+}
+
+/* LIGHTBOX BACKGROUND */  
+#lightbox {
+	display:none;
+	background-color:#000000; 
+	opacity:0.7; 
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter:alpha(opacity=70);  
+	position:fixed;  
+	top:0px;  
+	left:0px;  
+	width:100%;  
+	height:100%;  
+	z-index:2000;  
+	text-align:center; 
+}  
+
+/* LIGHTBOX PANEL CON CONTENUTI */  
+#lightbox-panel {  
+	display:none;  
+	position:absolute;  
+	top:131px;  
+	width: 90%;
+	left: 5%;
+	height: 1200%; 
+	min-height: 408px; 
+	background: #FFFFFF;
+	border: 1px solid #4B55D0;
+	z-index: 2001;
+	text-align:center;
+}
+
+.table-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+span.img-number {
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    background-image: url(./BarraMenuBackground_ricerca.png);
+    line-height: 20px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.img-table {
+    width: 100%;
+	height: 100%;
+    cursor: pointer;
+    border: 2px solid #116FDE;
+}
+
+.img-container {
+    position: relative;
+    padding-bottom: 40px;
+    flex: 0 0 30%;
+}
+
+@media screen and (max-width: 1135px) {
+    .img-container {
+       flex: 0 0 49%;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .img-container {
+       flex: 0 0 100%;
+    }
+}
